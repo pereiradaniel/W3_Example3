@@ -8,12 +8,16 @@ int main()
 	double a[5] { 1, 56, -3 };
 	int b[6];
 
-	int* arr = new int[6]; // int* exact type
+	int* arr = new int[5];
 
-	// for (auto i = 0; i < 3; ++i)
-	for (auto elem : a) // like for each
-		// cout << a[i] << ", ";
+	for (auto& elem : a)
+	{
 		cout << elem << ", ";
-		
-		cout << endl;
+		elem += 1;
+	}
+	for (auto elem : a)
+	{
+		cout << elem << ", ";
+	};
+	cout << endl;
 }
